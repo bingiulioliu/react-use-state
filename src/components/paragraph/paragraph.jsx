@@ -6,7 +6,7 @@ function Paragraph ({
     pParagraph = 'Paragraph Paragraph'
 }) {
     return <>
-        <div>
+        <div className="card">
             <h2>{pTitle}</h2>
             <p>{pParagraph}</p>
         </div>

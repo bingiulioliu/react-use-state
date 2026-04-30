@@ -10,7 +10,7 @@ function Btn({ buttonTitle, btnClicked, open}) {
     return <>
         <button 
         onClick={btnClicked} 
-        className={`btn ${btnClass}`}>
+        className={` btn ${btnClass}`}>
             {buttonTitle}
         </button>
     </>

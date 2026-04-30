@@ -4,8 +4,12 @@ import Title from "./components/Title.jsx";
 
 function App() {
   return <>
-      <Title/>
-      <Languages></Languages>
+      <div className="text-center">
+        <Title/>
+      </div>
+      <div className="">
+        <Languages/>
+      </div>
     </>
   ;
 }
