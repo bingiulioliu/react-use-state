@@ -1,8 +1,9 @@
-import HelloClasse154 from "./components/Languages";
+import Languages from "./components/Languages.jsx";
+import Title from "./components/Title.jsx";
 
 function App() {
-  return
-    <>
+  return <>
+      <Title/>
     </>
   ;
 }
