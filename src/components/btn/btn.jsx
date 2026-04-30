@@ -3,7 +3,6 @@ import styles from "../languages.module.css";
 
 function Btn({
     buttonTitle = 'Titolo linguaggio',
-    buttonContent = null
 }) {
     const [open, setOpen] = useState(true);
     const btnClass = open ? 'btn-primary' : 'btn-secondary';

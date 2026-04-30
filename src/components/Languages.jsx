@@ -11,14 +11,16 @@
 import Btn from "./btn/btn";
 import styles from "./languages.module.css";
 import languages from "../data/languages.js";
+import Paragraph from "./paragraph/paragraph.jsx";
 
 
 function Languages() {
     return <>
         {languages.map(language=>{
-            return <Btn key={language.id} buttonTitle={language.title} />
+            return <Btn key={language.id} buttonTitle={language.title}/>
         })
         } 
+        <Paragraph/>
     </>
     ;
 }
