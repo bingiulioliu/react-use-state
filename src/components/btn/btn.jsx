@@ -1,18 +1,19 @@
 import { useState } from "react";
 import styles from "../languages.module.css";
 
-function Btn({
-    buttonTitle = 'Titolo linguaggio',
-}) {
-    const [open, setOpen] = useState(true);
-    const btnClass = open ? 'btn-primary' : 'btn-warning';
-    const clickHandler = (event) =>{
-        setOpen(!open);
-    }
+// Props da definire nel padre (Languages)
+function Btn({ buttonTitle, btnClicked, open}) {
+
+    const btnClass = open ? 'btn-warning' : 'btn-primary';
+    
 
     return <>
-        <button onClick={clickHandler} className={`btn ${btnClass}`}>{buttonTitle}</button>
+        <button 
+        onClick={btnClicked} 
+        className={`btn ${btnClass}`}>
+            {buttonTitle}
+        </button>
     </>
-    ;
+        ;
 }
 export default Btn;

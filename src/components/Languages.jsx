@@ -12,29 +12,36 @@ import Btn from "./btn/btn";
 import styles from "./languages.module.css";
 import languages from "../data/languages.js";
 import Paragraph from "./paragraph/paragraph.jsx";
-
+import { useState } from "react";
 
 function Languages() {
 
-    const clickHandler = (event) =>{
-        setOpen(!open);
-    }
+    // Stato: memorizzo l'id del linguaggio selezionato
+    // null di default cosí non mostra nulla
+    const [selLanguage, setSelLanguage] = useState(null);
+
+    // Cerco in languages l'oggetto con lo stesso id
+    const selectedLanguage = languages.find( language => language.id === selLanguage);
 
     return <>
+
         {languages.map(language=>{
             return <Btn 
             key={language.id} 
-            buttonTitle={language.title}/>
+            buttonTitle={language.title}
+            btnClicked={() => setSelLanguage(language.id)}
+            open = {selLanguage === language.id}/>
         })
         } 
-        {languages.map(language=>{
-            return <Paragraph 
-            key={language.id} 
-            pTitle={language.title} 
-            pParagraph={language.description}/>
-        })
-        }
+        
+        {selectedLanguage ? (
+            <Paragraph 
+            pTitle={selectedLanguage.title} 
+            pParagraph={selectedLanguage.description}/>
+        ) : (null)}
+        
+
     </>
-    ;
+    
 }
 export default Languages;
