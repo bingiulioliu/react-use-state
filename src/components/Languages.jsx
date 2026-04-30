@@ -10,12 +10,15 @@
 
 import Btn from "./btn/btn";
 import styles from "./languages.module.css";
-
+import languages from "../data/languages.js";
 
 
 function Languages() {
     return <>
-        <Btn></Btn>
+        {languages.map(language=>{
+            return <Btn key={language.id} buttonTitle={language.title} />
+        })
+        } 
     </>
     ;
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../languages.module.css";
 
 function Btn({
-    buttonTitle = null,
+    buttonTitle = 'Titolo linguaggio',
     buttonContent = null
 }) {
     const [open, setOpen] = useState(true);
