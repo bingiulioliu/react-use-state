@@ -24,7 +24,9 @@ function Languages() {
     const selectedLanguage = languages.find( language => language.id === selLanguage);
 
     return <>
-
+        {/* mappo per cercare i componenti dei bottoni
+        Funzione al click per aggiornare lo stato
+        */}
         {languages.map(language=>{
             return <Btn 
             key={language.id} 
@@ -34,6 +36,7 @@ function Languages() {
         })
         } 
         
+        {/* Mostro il paragrafo, altrimenti nulla */}
         {selectedLanguage ? (
             <Paragraph 
             pTitle={selectedLanguage.title} 
