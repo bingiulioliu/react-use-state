@@ -8,10 +8,15 @@
 // Per combinare una classe del modulo con altre classi (globali o di
 // Bootstrap) si usa un template literal, come nell'`<h1>` qui sotto.
 
+import Btn from "./btn/btn";
 import styles from "./languages.module.css";
 
-function Language() {
-    return
+
+
+function Languages() {
+    return <>
+        <Btn></Btn>
+    </>
     ;
 }
-export default Language;
+export default Languages;
