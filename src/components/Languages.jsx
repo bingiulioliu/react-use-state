@@ -17,10 +17,15 @@ import Paragraph from "./paragraph/paragraph.jsx";
 function Languages() {
     return <>
         {languages.map(language=>{
-            return <Btn key={language.id} buttonTitle={language.title}/>
+            return <Btn 
+            key={language.id} 
+            buttonTitle={language.title}/>
         })
         } 
-        <Paragraph/>
+        {languages.map(language=>{
+            return <Paragraph key={language.id} pTitle={language.title} pParagraph={language.description}/>
+        })
+        }
     </>
     ;
 }
