@@ -15,6 +15,11 @@ import Paragraph from "./paragraph/paragraph.jsx";
 
 
 function Languages() {
+
+    const clickHandler = (event) =>{
+        setOpen(!open);
+    }
+
     return <>
         {languages.map(language=>{
             return <Btn 
