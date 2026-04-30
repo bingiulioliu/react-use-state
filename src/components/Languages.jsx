@@ -23,7 +23,10 @@ function Languages() {
         })
         } 
         {languages.map(language=>{
-            return <Paragraph key={language.id} pTitle={language.title} pParagraph={language.description}/>
+            return <Paragraph 
+            key={language.id} 
+            pTitle={language.title} 
+            pParagraph={language.description}/>
         })
         }
     </>

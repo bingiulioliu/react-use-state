@@ -5,10 +5,13 @@ function Btn({
     buttonTitle = 'Titolo linguaggio',
 }) {
     const [open, setOpen] = useState(true);
-    const btnClass = open ? 'btn-primary' : 'btn-secondary';
+    const btnClass = open ? 'btn-primary' : 'btn-warning';
+    const clickHandler = (event) =>{
+        setOpen(!open);
+    }
 
     return <>
-        <button className={`btn ${btnClass}`}>{buttonTitle}</button>
+        <button onClick={clickHandler} className={`btn ${btnClass}`}>{buttonTitle}</button>
     </>
     ;
 }
