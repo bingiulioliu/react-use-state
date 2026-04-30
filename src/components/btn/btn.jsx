@@ -1,9 +1,15 @@
+import { useState } from "react";
 import styles from "../languages.module.css";
 
+function Btn({
+    buttonTitle = null,
+    buttonContent = null
+}) {
+    const [open, setOpen] = useState(true);
+    const btnClass = open ? 'btn-primary' : 'btn-secondary';
 
-function Btn() {
     return <>
-        <button></button>
+        <button className={`btn ${btnClass}`}>{buttonTitle}</button>
     </>
     ;
 }
